@@ -1,1 +1,5 @@
 .vs/
+*.suo                       # Solution user options
+*.user                      # User-specific project settings
+*.vcxproj.user              # C++ project user settings
+*.pdb                       # Debug database files
