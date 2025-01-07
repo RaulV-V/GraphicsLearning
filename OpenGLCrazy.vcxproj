@@ -140,7 +140,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\hoood\Downloads\glad\src\glad.c" />
+    <ClCompile Include="EBO.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="VBO.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="default.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EBO.h" />
+    <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="VBO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
