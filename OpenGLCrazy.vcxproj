@@ -165,7 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="anime.png" />
-    <Image Include="OpenGLCrazy\minion.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

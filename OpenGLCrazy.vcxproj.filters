@@ -77,8 +77,5 @@
     <Image Include="anime.png">
       <Filter>Resource Files\Textures</Filter>
     </Image>
-    <Image Include="OpenGLCrazy\minion.png">
-      <Filter>Resource Files\Textures</Filter>
-    </Image>
   </ItemGroup>
 </Project>

@@ -1,5 +1,4 @@
 #include<filesystem>
-//using fs = std::filesystem;
 
 #include<iostream>
 #include<glad/glad.h>
@@ -79,15 +78,15 @@ int main()
 	
 
 	//Texture 
-	std::cout << "Checking file: " << std::filesystem::exists("D:/Coding/OpenGLCrazy/anime.png") << std::endl;
-	std::cout << "Current Working Directory: " << std::filesystem::current_path() << std::endl;
 	std::string parentDir = (std::filesystem::current_path().std::filesystem::path::parent_path()).string();
-	std::cout << parentDir << std::endl;
-	std::string texPath = "/Resources/OpenGLCrazy 6 - Textures/";
+	std::string texPath = "\\OpenGLCrazy\\";
+
+	Texture popCat((parentDir + texPath + "anime.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	popCat.texUnit(shaderProgram, "tex0", 0);
 
 
-	Texture anime("D:\Coding\OpenGLCrazy\anime.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_INT);
-	anime.texUnit(shaderProgram, "tex0", 0);
+	/*Texture anime("D:\Coding\OpenGLCrazy\anime.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_INT);
+	anime.texUnit(shaderProgram, "tex0", 0);*/
 
 
 	while (!glfwWindowShouldClose(window))
@@ -97,7 +96,7 @@ int main()
 		shaderProgram.Activate();
 
 		glUniform1f(uniID, 0.0f);
-		anime.Bind();
+		popCat.Bind();
 
 		VAO1.Bind();
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
@@ -110,7 +109,7 @@ int main()
 	VAO1.Delete();
 	VBO1.Delete();
 	EBO1.Delete();
-	anime.Delete();
+	popCat.Delete();
 	shaderProgram.Delete();
 
 	glfwDestroyWindow(window);
